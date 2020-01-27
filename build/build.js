@@ -26,9 +26,12 @@ webpack(config.toConfig(), function(err, stats) {
       chunkModules: false
     }) + "\n\n"
   );
-  if (stats.hasErrors) {
+
+  // 这个是个函数
+  if (stats.hasErrors()) {
     console.log(chalk.red("构建失败\n"));
     process.exit(1);
+  } else {
+    console.log(chalk.cyan("build完成\n"));
   }
-  console.log(chalk.cyan("build完成\n"));
 });
