@@ -14,11 +14,7 @@ module.exports = () => {
   });
   map.forEach((v, key) => {
     // css 配置
-    if (key === "css") {
-      v("css", /\.css$/);
-    } else {
-      v();
-    }
+    v();
   });
   return config;
 };

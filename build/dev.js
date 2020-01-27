@@ -12,6 +12,8 @@ config.devServer
   .disableHostCheck(true)
   .publicPath(publicPath)
   .clientLogLevel("none");
+// 开启 source map
+config.devtool("cheap-source-map");
 
 const compiler = webpack(config.toConfig());
 // 拿到 devServer 参数
