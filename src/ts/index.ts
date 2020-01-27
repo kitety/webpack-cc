@@ -1,4 +1,2 @@
-// 测试ts
-const c: number = 11;
-const c2: number | string = "l";
-console.log(c);
+const a:number=11
+console.log(a);

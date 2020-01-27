@@ -4,6 +4,12 @@ module.exports = function(api) {
   return {
     presets: [
       [
+        "@babel/preset-typescript",
+        {
+          allExtensions: true
+        }
+      ],
+      [
         "@babel/preset-env",
         {
           targets: {
@@ -12,12 +18,6 @@ module.exports = function(api) {
             firefox: 50,
             safari: 8
           }
-        }
-      ],
-      [
-        "@babel/preset-typescript",
-        {
-          // allExtensions: true
         }
       ]
     ],
